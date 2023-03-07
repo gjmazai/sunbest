@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Headers from "./Headers";
-import ContentPreview from "./ContentPreview";
+import ContentPreview from "../components/ContentPreview";
 
 const Main: FC = () => {
 	return (
