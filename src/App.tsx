@@ -1,7 +1,7 @@
 import React from "react";
 import "./assets/scss/App.scss";
-import Preview from "./components/Preview";
-import Main from "./components/Main";
+import Preview from "./pages/Preview";
+import Main from "./pages/Main";
 
 function App() {
 	return (
