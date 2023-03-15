@@ -15,6 +15,7 @@ function App() {
 		<div className="App">
 			<Preview />
 			<Main />
+
 			<header className="App-header"></header>
 		</div>
 	);
