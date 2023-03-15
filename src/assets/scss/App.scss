@@ -1,4 +1,5 @@
 $font: "Inter", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
 
 h1{
   font-weight: 400;
@@ -22,12 +23,27 @@ p {
   font-family: $font;
 }
 
+h5{
+      font-style: normal;
+        font-size: 15px;
+        line-height: 23px;
+        /* or 23px */
+        letter-spacing: -0.02em;
+        /* ЧЕРНЫЙ СВЕТЛЫЙ */
+        color: #353535;
+        font-weight: 500;
+        font-size: medium;
+      }
+
 ul {
   margin-left: 0;
   /* Отступ слева в браузере IE и Opera */
   padding-left: 0;
   /* Отступ слева в браузере Firefox, Safari, Chrome */
+  list-style-type: none;
+  text-align: left;
 }
+
 
 button {
   padding: 0;
@@ -46,8 +62,8 @@ img {
 
 
 .App {
-  text-align: center;
-
+  // text-align: center;
+    
 
   .Preview {
     width: 100%;
@@ -241,8 +257,85 @@ img {
   display: flex;
   margin-top: 20px;
   gap: 20px;
+  .ContentPreviewPromotion__backLine__card{
+    // padding: 0;
+    width: 219px;
+    // height: 260px;
+    .ContentPreviewPromotion__backLine__text_card{
+      text-align: left;
+      // margin-left: 10px;
+    }
+  }
+  .ContentPreviewPromotion__backLine__card__nophoto{
+  
+    // justify-content: center;
+    border: 1px solid #E1E3E5;
+    border-radius: 3px;
+    width: 219px;
+    height: 260px;
+    position: relative;
+    .ContentPreviewPromotion__backLine__text_card__nophoto{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) translateX(25%);
+    }
+  }
 }
 
+.PromotionsProducts{
+  margin: 98px 0 90px;
+  .PromotionsProducts_title{
+    color: rgb(0,0,0);
+    margin-bottom: 20px;
+  }
+  .PromotionsProducts__list{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: left;
+    gap: 20px;
+  }
+  .PromotionProduct{
+    width: 279px;
+    max-height: 500px;
+
+    .PromotionProduct__img{
+      position: relative;;
+      background-color: #F9F9F9;
+      height: 300px;
+      max-width: 280px;
+      margin: 0 auto;
+      .PromotionProduct__img-svg{
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+    .availabilityIcon{
+      position: absolute;
+      left: 0;
+    }
+  }
+  .PromotionProduct__description{
+    display: grid;
+    grid-template-rows: 32px 10px 42px 10px 55px;
+    text-align: left;
+    .PromotionProduct__cost{
+      grid-row: 1;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+    .PromotionProduct__fullName{
+      grid-row: 3;
+    }
+    .PromotionProduct__list{
+      grid-row: 5;
+    }
+  }
+}
 
 
 .App-header {
