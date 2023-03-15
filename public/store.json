@@ -8,7 +8,7 @@
 		"id": 254882,
 		"promotion": true,
 		"availability": true,
-		"img": "/src/assets/img/bath1.svg"
+		"img": "bath1.svg"
 	},
 	{
 		"fullName": "Акриловая ванна Aquanet Extra 254886 160x70",
@@ -19,29 +19,29 @@
 		"id": 254886,	
 		"promotion": true,
 		"availability": true,
-		"img": "/src/assets/img/bath2.jpg"
+		"img": "bath2.jpg"
 	},
 	{
-		"fullName": "Унитаз-компакт Sensea Lisso универсальный выпуск двойной слив",
+		"fullName": "Унитаз-компакт Sensea Lisso",
 		"cost": 12350,
 		"size": "60×80×40, см",
 		"brand": "Sensea Lisso",
 		"country": "Франция",
-		"code": 15486,
+		"id": 15486,
 		"promotion": true,
 		"availability": true,
-		"img": "/src/assets/img/toilet1.jpg"
+		"img": "toilet1.jpg"
 	},
 	{
-		"fullName": "Унитаз-компакт Sanita Luxe Koob универсальный выпуск двойной слив",
+		"fullName": "Унитаз-компакт Sanita Luxe Koob",
 		"cost": 9905,
 		"size": "60×80×40, см",
 		"brand": "Sanita",
 		"country": "Нидерланды",
-		"code": 134695,
+		"id": 134695,
 		"promotion": true,
 		"availability": false,
-		"img": "/src/assets/img/toilet1.jpg"
+		"img": "toilet1.jpg"
 	}
 		
 ]
