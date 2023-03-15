@@ -5,7 +5,7 @@ export interface IPromotionProducts{
 	brand: string;
 	country: string;
 	id: number;
-	promotion: boolean | null;
-	availability: boolean | null;
+	promotion?: boolean;
+	availability?: boolean;
 	img: string;
 }
