@@ -1,13 +1,13 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { IPromotionProducts } from "../models/IPromotionProducts";
 import availabilityIcon from "../assets/img/availability-icon.svg";
 import { costDenominator } from "../utils/costDenominator";
 
-interface PromotionProductProps {
+interface ProductCardProps {
 	promotionProduct: IPromotionProducts;
 }
 
-const PromotionProduct: FC<PromotionProductProps> = ({ promotionProduct }) => {
+const PromotionProduct: FC<ProductCardProps> = ({ promotionProduct }) => {
 	const imgReg = require(`../assets/img/${promotionProduct.img}`) as string;
 
 	return (
