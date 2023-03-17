@@ -4,15 +4,13 @@ import classes from "./modalWindow.module.scss";
 import { JsxElement } from "typescript";
 
 interface modellWindowProps {
-	product: IPromotionProducts;
 	visible: boolean;
 	setVisible: (visible: boolean) => void;
 	children: ReactNode;
 }
 
-const ModalWindow: FC<modellWindowProps> = ({ product, visible, setVisible, children }) => {
+const ModalWindow: FC<modellWindowProps> = ({ visible, setVisible, children }) => {
 	const rootClasses = [classes.myModal];
-
 	if (visible) {
 		rootClasses.push(classes.active);
 	}
@@ -22,7 +20,6 @@ const ModalWindow: FC<modellWindowProps> = ({ product, visible, setVisible, chil
 			className={rootClasses.join(" ")}
 			onClick={() => {
 				setVisible(false);
-				console.log(visible);
 			}}
 		>
 			<div
