@@ -6,9 +6,10 @@ import Main from "./pages/Main";
 import { useActions } from "./hooks/useAction";
 
 function App() {
-	const { fetchPromotionProducts } = useActions();
+	const { fetchPromotionProducts, fetchProductsCart } = useActions();
 	useEffect(() => {
 		fetchPromotionProducts();
+		fetchProductsCart();
 	}, []);
 
 	return (
