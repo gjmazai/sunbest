@@ -123,7 +123,7 @@ img {
   width: 1230px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 216px 1fr 205px 1fr;
+  grid-template-columns: 1fr 216px 1fr 100px 1.5fr;
   align-items: center;
 
   .HeaderMain-logo2{
@@ -164,6 +164,51 @@ img {
     display: flex;
     gap: 21px;
     align-items: center;
+    justify-content: center;
+
+    .HeaderMain-icons__container{
+      position: relative;
+      padding: 10px;
+      border-radius: 50px;
+      justify-items: center;
+      justify-self: center;
+      align-items: center;
+     
+    
+      .HeaderMain-icons__count{
+        display: flex;
+        text-align: center;
+        justify-content:center;
+        background-color: #E43232;
+        height: 20px;
+        width: 20px;
+        border-radius: 10px;
+        position: absolute;
+        top:0;
+        right: 0;
+        font-size: 13px;
+        color:#F7F7F7;
+        transition: all ease 0.5s;
+      }
+
+      .HeaderMain-icons__icon path{
+        fill:#47A3D8;
+        transition: all 0.5s;
+        position: relative;
+      }
+    }
+
+    .HeaderMain-icons__container:hover{
+      cursor: pointer;
+      .HeaderMain-icons__count{
+        background-color: #47a3d8b0;
+      }
+
+    .HeaderMain-icons__icon path{
+      fill: rgb(255, 0, 0);
+    }
+    }
+    
   }
 }
 
@@ -300,11 +345,12 @@ img {
     max-height: 500px;
 
     .PromotionProduct__img{
-      position: relative;;
+      position: relative;
       background-color: #F9F9F9;
       height: 300px;
       max-width: 280px;
       margin: 0 auto;
+      z-index: 1;
       .PromotionProduct__img-svg{
         margin: auto;
         position: absolute;
