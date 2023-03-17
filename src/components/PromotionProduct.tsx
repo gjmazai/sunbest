@@ -1,17 +1,29 @@
-import React, { FC, useState } from "react";
+import React, { Dispatch, FC, SetStateAction, useRef, useState } from "react";
 import { IPromotionProducts } from "../models/IPromotionProducts";
 import availabilityIcon from "../assets/img/availability-icon.svg";
 import { costDenominator } from "../utils/costDenominator";
 
 interface ProductCardProps {
 	promotionProduct: IPromotionProducts;
+	setIdProduct: Dispatch<SetStateAction<number>>;
+	setIsVisibleModalWindow: (isVisible: boolean) => void;
+	isVisible: boolean;
 }
 
-const PromotionProduct: FC<ProductCardProps> = ({ promotionProduct }) => {
+const PromotionProduct: FC<ProductCardProps> = ({ promotionProduct, setIdProduct, setIsVisibleModalWindow, isVisible }) => {
 	const imgReg = require(`../assets/img/${promotionProduct.img}`) as string;
+	const imgRef = useRef();
 
 	return (
-		<div className="PromotionProduct">
+		<div
+			className="PromotionProduct"
+			onClick={() => {
+				if (!isVisible) {
+					setIdProduct(promotionProduct.id);
+					setIsVisibleModalWindow(true);
+				}
+			}}
+		>
 			<div className="PromotionProduct__img">
 				<img
 					src={imgReg}
