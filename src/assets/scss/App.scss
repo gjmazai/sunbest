@@ -388,6 +388,7 @@ img {
   }
 
   .PromotionProduct__description{
+    position: relative;
     display: grid;
     grid-template-rows: 32px 10px 42px 10px 55px;
     text-align: left;
@@ -407,6 +408,12 @@ img {
   }
 }
 
+
+.PromotionProduct__like{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
 .App-header {
   background-color: #282c34;
