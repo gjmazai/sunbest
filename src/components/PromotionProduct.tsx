@@ -4,6 +4,8 @@ import { IPromotionProducts } from "../models/IPromotionProducts";
 import availabilityIcon from "../assets/img/availability-icon.svg";
 import notAvailbalityIcon from "../assets/img/availability-iconNOT.svg";
 import promoIcon from "../assets/img/promotion-icon.svg";
+import likeIcon from "../assets/img/like-icon.svg";
+import likeIconRed from "../assets/img/like-icon-red.svg";
 
 import { costDenominator } from "../utils/costDenominator";
 
@@ -35,8 +37,23 @@ const PromotionProduct: FC<ProductCardProps> = ({ promotionProduct, setIdProduct
 					style={{ maxWidth: "230px" }}
 				/>
 				<div className="availabilityIcon">
-					{promotionProduct.availability ? <img src={availabilityIcon} /> : <img src={notAvailbalityIcon} />}
-					{promotionProduct.promotion && <img src={promoIcon} />}
+					{promotionProduct.availability ? (
+						<img
+							src={availabilityIcon}
+							alt=""
+						/>
+					) : (
+						<img
+							src={notAvailbalityIcon}
+							alt=""
+						/>
+					)}
+					{promotionProduct.promotion && (
+						<img
+							src={promoIcon}
+							alt=""
+						/>
+					)}
 				</div>
 			</div>
 			<div className="PromotionProduct__description">
@@ -63,6 +80,19 @@ const PromotionProduct: FC<ProductCardProps> = ({ promotionProduct, setIdProduct
 						Код: <span>{promotionProduct.id}</span>
 					</li>
 				</ul>
+				{!promotionProduct.like ? (
+					<img
+						src={likeIcon}
+						alt=""
+						className="PromotionProduct__like"
+					/>
+				) : (
+					<img
+						src={likeIconRed}
+						alt=""
+						className="PromotionProduct__like"
+					/>
+				)}
 			</div>
 		</div>
 	);
