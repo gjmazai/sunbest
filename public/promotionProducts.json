@@ -11,7 +11,8 @@
 		"availability": true,
 		"promoCost": 14999,
 		"img": "bath1.svg",
-		"countBuyer": 0
+		"countBuyer": 0,
+		"like": false
 	},
 	{
 		"fullName": "Акриловая ванна Aquanet Extra 254886 160x70",
@@ -25,7 +26,8 @@
 		"availability": true,
 		"promoCost": 18999,
 		"img": "bath2.jpg",
-		"countBuyer": 0
+		"countBuyer": 0,
+		"like": false
 	},
 	{
 		"fullName": "Унитаз-компакт Sensea Lisso",
@@ -39,7 +41,8 @@
 		"availability": true,
 		"promoCost": 9550,
 		"img": "toilet1.jpg",
-		"countBuyer": 0
+		"countBuyer": 0,
+		"like": false
 	},
 	{
 		"fullName": "Унитаз-компакт Sanita Luxe Koob",
@@ -53,7 +56,8 @@
 		"availability": false,
 		"promoCost": null,
 		"img": "toilet1.jpg",
-		"countBuyer": 0
+		"countBuyer": 0,
+		"like": false
 	}
 		
 ]
