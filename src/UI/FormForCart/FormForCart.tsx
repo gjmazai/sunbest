@@ -12,7 +12,7 @@ interface FormForCartProps {
 const FormForCart: FC<FormForCartProps> = ({ product, setProduct }) => {
 	return (
 		<div className={classes.form}>
-			<h2 className="PromotionProduct__cost">{costDenominator(product.cost)} ₽</h2>
+			{product.promoCost ? <h2 className="PromotionProduct__cost">{costDenominator(product.promoCost)} ₽</h2> : <h2 className="PromotionProduct__cost">{costDenominator(product.cost)} ₽</h2>}
 			<h5 className="PromotionProduct__fullName">{product.fullName}</h5>
 			<ul className="PromotionProduct__list">
 				<li>
