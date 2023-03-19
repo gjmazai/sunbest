@@ -6,7 +6,7 @@ import classes from "./ForamForCart.module.scss";
 
 interface FormForCartProps {
 	product: IPromotionProducts;
-	setProduct: (newProduct: IPromotionProducts) => void;
+	setProduct: (newProduct?: IPromotionProducts) => void;
 }
 
 const FormForCart: FC<FormForCartProps> = ({ product, setProduct }) => {
@@ -28,14 +28,25 @@ const FormForCart: FC<FormForCartProps> = ({ product, setProduct }) => {
 					Код: <span>{product.id}</span>
 				</li>
 			</ul>
-			<button
-				className={classes.button}
-				onClick={() => {
-					setProduct(product);
-				}}
-			>
-				Добавить товар в корзину
-			</button>
+			{product.availability ? (
+				<button
+					className={classes.button}
+					onClick={() => {
+						setProduct(product);
+					}}
+				>
+					Добавить товар в корзину
+				</button>
+			) : (
+				<button
+					className={classes.button}
+					onClick={() => {
+						setProduct();
+					}}
+				>
+					Сообщить о появлении
+				</button>
+			)}
 		</div>
 	);
 };
