@@ -1,28 +1,35 @@
 [
 	{
 		"fullName": "Акриловая ванна Aquanet Extra 254882 160x70",
-		"cost": 149755,
+		"category": "bath",
+		"cost": 19999,
 		"size": "190×80×40, см",
 		"brand": "Bette",
 		"country": "Германия",
 		"id": 254882,
 		"promotion": true,
 		"availability": true,
-		"img": "bath1.svg"
+		"promoCost": 14999,
+		"img": "bath1.svg",
+		"countBuyer": 0
 	},
 	{
 		"fullName": "Акриловая ванна Aquanet Extra 254886 160x70",
-		"cost": 136999,
+		"category": "bath",
+		"cost": 21349,
 		"size": "190×80×40, см",
 		"brand": "Bette",
 		"country": "Германия",
 		"id": 254886,	
 		"promotion": true,
 		"availability": true,
-		"img": "bath2.jpg"
+		"promoCost": 18999,
+		"img": "bath2.jpg",
+		"countBuyer": 0
 	},
 	{
 		"fullName": "Унитаз-компакт Sensea Lisso",
+		"category": "toilet",
 		"cost": 12350,
 		"size": "60×80×40, см",
 		"brand": "Sensea Lisso",
@@ -30,18 +37,23 @@
 		"id": 15486,
 		"promotion": true,
 		"availability": true,
-		"img": "toilet1.jpg"
+		"promoCost": 9550,
+		"img": "toilet1.jpg",
+		"countBuyer": 0
 	},
 	{
 		"fullName": "Унитаз-компакт Sanita Luxe Koob",
+		"category": "toilet",
 		"cost": 9905,
 		"size": "60×80×40, см",
 		"brand": "Sanita",
 		"country": "Нидерланды",
 		"id": 134695,
-		"promotion": true,
+		"promotion": false,
 		"availability": false,
-		"img": "toilet1.jpg"
+		"promoCost": null,
+		"img": "toilet1.jpg",
+		"countBuyer": 0
 	}
 		
 ]
