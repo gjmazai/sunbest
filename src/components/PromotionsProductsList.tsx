@@ -16,8 +16,8 @@ const PromotionsProductsList: FC = () => {
 	const [isVisibleModalWindow, setIsVisibleModalWindow] = useState(false);
 	const [idProduct, setIdProduct] = useState(0);
 
-	const setProduct = (newProduct: IPromotionProducts) => {
-		setNewProduct(newProduct);
+	const setProduct = (newProduct?: IPromotionProducts) => {
+		if (newProduct) setNewProduct(newProduct);
 		setIsVisibleModalWindow(false);
 	};
 
