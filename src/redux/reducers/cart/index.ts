@@ -10,7 +10,7 @@ export const cartSlice = createSlice({
 	name: 'cart',
 	initialState,
 	reducers:{
-	setPromotionProduct: (state, action:PayloadAction<IPromotionProducts>) => {
+	setProductInCart: (state, action:PayloadAction<IPromotionProducts>) => {
 		state.products = [...state.products , action.payload];
 	},
 	setAllProductsInCart: (state, action:PayloadAction<IPromotionProducts[]>) => {

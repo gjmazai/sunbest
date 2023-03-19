@@ -11,7 +11,7 @@ export const cartActionCreator = {
 			jsonProductsCart.push(newProduct);
 			console.log(jsonProductsCart);
 			localStorage.setItem('productsCart', JSON.stringify(jsonProductsCart));
-			dispatch(cartSlice.actions.setPromotionProduct(newProduct));
+			dispatch(cartSlice.actions.setProductInCart(newProduct));
 		} catch(error){
 			console.error(error);
 		}
