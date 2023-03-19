@@ -10,4 +10,5 @@ export interface IPromotionProducts{
 	availability: boolean;
 	promoCost: number | null,
 	img: string;
+	like: boolean;
 }
