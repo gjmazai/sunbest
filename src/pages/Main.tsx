@@ -1,14 +1,24 @@
 import React, { FC } from "react";
 import Headers from "./Headers";
-import ContentPreview from "../components/ContentPreview";
-import PreviewProducts from "./PreviewProducts";
+import Content from "./Content";
+
+import { Route, Routes } from "react-router-dom";
+import { cartRoute, contentRoute } from "../router/router";
 
 const Main: FC = () => {
 	return (
 		<div className="Main">
 			<Headers />
-			<ContentPreview />
-			<PreviewProducts />
+			<Routes>
+				<Route
+					path={contentRoute.path}
+					element={<Content />}
+				/>
+				<Route
+					path={cartRoute.path}
+					element={<cartRoute.element />}
+				/>
+			</Routes>
 		</div>
 	);
 };
