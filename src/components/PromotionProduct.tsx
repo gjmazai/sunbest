@@ -1,6 +1,10 @@
-import React, { Dispatch, FC, SetStateAction, useRef, useState } from "react";
+import React, { Dispatch, FC, SetStateAction } from "react";
 import { IPromotionProducts } from "../models/IPromotionProducts";
+
 import availabilityIcon from "../assets/img/availability-icon.svg";
+import notAvailbalityIcon from "../assets/img/availability-iconNOT.svg";
+import promoIcon from "../assets/img/promotion-icon.svg";
+
 import { costDenominator } from "../utils/costDenominator";
 
 interface ProductCardProps {
@@ -12,34 +16,38 @@ interface ProductCardProps {
 
 const PromotionProduct: FC<ProductCardProps> = ({ promotionProduct, setIdProduct, setIsVisibleModalWindow, isVisible }) => {
 	const imgReg = require(`../assets/img/${promotionProduct.img}`) as string;
-	const imgRef = useRef();
 
 	return (
-		<div
-			className="PromotionProduct"
-			onClick={() => {
-				if (!isVisible) {
-					setIdProduct(promotionProduct.id);
-					setIsVisibleModalWindow(true);
-				}
-			}}
-		>
-			<div className="PromotionProduct__img">
+		<div className="PromotionProduct">
+			<div
+				className="PromotionProduct__img"
+				onClick={() => {
+					if (!isVisible) {
+						setIdProduct(promotionProduct.id);
+						setIsVisibleModalWindow(true);
+					}
+				}}
+			>
 				<img
 					src={imgReg}
 					alt="Промо-акция продукта"
 					className="PromotionProduct__img-svg"
 					style={{ maxWidth: "230px" }}
 				/>
-				{promotionProduct.availability && (
-					<img
-						src={availabilityIcon}
-						className="availabilityIcon"
-					/>
-				)}
+				<div className="availabilityIcon">
+					{promotionProduct.availability ? <img src={availabilityIcon} /> : <img src={notAvailbalityIcon} />}
+					{promotionProduct.promotion && <img src={promoIcon} />}
+				</div>
 			</div>
 			<div className="PromotionProduct__description">
-				<h2 className="PromotionProduct__cost">{costDenominator(promotionProduct.cost)} ₽</h2>
+				{promotionProduct.promoCost ? (
+					<div className="PromotionProduct__cost">
+						<h2>{costDenominator(promotionProduct.promoCost)} ₽</h2>
+						<p className="PromotionProduct__cost__text-decoration">{costDenominator(promotionProduct.cost)} ₽</p>
+					</div>
+				) : (
+					<h2 className="PromotionProduct__cost">{costDenominator(promotionProduct.cost)} ₽</h2>
+				)}
 				<h5 className="PromotionProduct__fullName">{promotionProduct.fullName}</h5>
 				<ul className="PromotionProduct__list">
 					<li>
